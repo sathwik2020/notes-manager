@@ -1,0 +1,21 @@
+<section class="todo-entry">
+  <section class="todo-input-section">
+      <!-- <input placeholder="Enter the Title?" class="txt-todo-input form-control" (keyup.enter)="addTodo()" type="text"
+      [(ngModel)]="todoName" /> -->
+    <input placeholder="Enter the Title?" class="txt-todo-input form-control"  type="text"
+      [(ngModel)]="todoName" (input)="editTodo()"/>
+      <hr>
+
+      <textarea rows="10" placeholder="Enter Content?" class="txt-todo-input form-control"  type="text"
+      [(ngModel)]="todoContent"  (input)="editTodo()"></textarea>
+      <p *ngIf="todoCreatedOn" >Created At: {{todoCreatedOn | date:'medium'}}</p>
+      <p *ngIf="todoCreatedOn" >Last Updated At: {{todoUpdatedOn | date:'medium'}}</p>
+      <!-- <button type="button" *ngIf="!isEditing || todoId ==0" class="btn-add-todo btn btn-primary" (click)="addTodo()"> Add Note </button> -->
+      <button type="button"  class="btn-add-todo btn btn-primary" (click)="resetEdit()"> Save </button>
+
+     <!-- <button type="button" class="btn-add-todo btn btn-primary" (click)="addTodo()"> Add Note </button> -->
+  </section>
+  <section class="btn-add-todo-section">
+
+  </section>
+</section>

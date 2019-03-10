@@ -1,0 +1,55 @@
+.todo-entry {
+  min-height: 80vh;
+}
+
+.todo-input-section {
+  width: 100%;
+}
+input, button{
+  margin: 1rem 0;
+}
+.btn-add-todo{
+  width: 200px;
+}
+
+.form-control:focus {
+  color: black;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: unset;
+}
+input {
+  border: 0;
+  border-bottom: 2px solid #1976D2;
+  width: 100%;
+  font-size: 30px;
+  line-height: 35px;
+  height: 70px;
+  text-align: center;
+  padding: 10px;
+  background: transparent;
+     /* color: #BBDEFB; */
+ }
+ textarea {
+  border: 0;
+  overflow: auto;
+  outline: none;
+  background: transparent;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 30px;
+
+  /* resize: none; remove the resize handle on the bottom right */
+}
+ input:focus {
+  outline: 0;
+     /* color: #BBDEFB; */
+ }
+
+ .todo-input-section{
+   padding: 20px;
+ }

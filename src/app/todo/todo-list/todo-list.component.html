@@ -1,0 +1,26 @@
+<ul class="todo-list-items list-group">
+  <div class="search-container">
+    <input placeholder="Search" class="txt-todo-input form-control"  type="text"
+    [(ngModel)]="noteFilter" />
+  </div>
+   <!-- sdfsd: {{selectedNote | json}} -->
+    <ng-container *ngFor="let todo of (todosState$ | async)?.todos.reverse() | filter: noteFilter; let i = index;let first = first; let last = last">
+        <!-- {{todo | json}}
+        {{i}} -->
+        <li [ngClass]="{ 'active': todo.id == selectedNote?.id  }" class="todo-list-item list-group-item" (click)="selectTodo(todo)">
+
+            <section class="left-align note-list-item" >
+              <h3 class="todo-item-name"> {{ todo.name }} </h3>
+              <p class="todo-item-content"> {{ todo.content }} </p>
+              <p class="todo-created-date"> {{ todo.createdOn | date:'medium' }} </p>
+            </section>
+
+            <section class="btn-delete-todo-section" *ngIf="!first || !last">
+              <button type="button" class="btn-delete-todo btn-add-todo btn btn-danger" (click)="deleteTodo(todo)"> X
+              </button>
+            </section>
+
+          </li>
+
+      </ng-container>
+</ul>

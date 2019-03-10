@@ -1,0 +1,27 @@
+<section class="todo-manager">
+  <section class="todos-section">
+      <mat-toolbar color="primary">
+          <div fxHide.gt-xs>
+              <button mat-icon-button (click)="sidenav.toggle()">
+                  <mat-icon>menu</mat-icon>
+              </button>
+          </div>
+          <h2 class="todo-module-header"> Welcome to Note Taking Application </h2>
+          <section class="btn-back-section">
+              <button type="button" class="btn btn-primary" routerLink="/"> Go Back </button>
+            </section>
+        </mat-toolbar>
+
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav role="navigation" [opened]="true" mode="side">
+            <app-todo-list class="todo-list"></app-todo-list>
+
+       </mat-sidenav>
+
+  <mat-sidenav-content>
+      <app-todo-entry class="todo-entry"></app-todo-entry>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+  </section>
+</section>

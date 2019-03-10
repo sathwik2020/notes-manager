@@ -1,0 +1,28 @@
+.list-group{
+  /* width:30%; */
+  min-width: 400px;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  .todo-list-item section{
+    display: inline-block;
+    margin: 5px;
+  }
+  .btn-delete-todo{
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+  }
+  .btn-delete-todo-section{
+    vertical-align: top;
+    float: right;
+  }
+  .search-container{
+    padding: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    .list-group{
+      /* width:30%; */
+      min-width: 300px;
+      }
+  }

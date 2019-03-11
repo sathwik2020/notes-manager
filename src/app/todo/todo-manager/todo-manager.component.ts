@@ -8,12 +8,15 @@ import { Component, OnInit, ChangeDetectorRef, Output, EventEmitter } from '@ang
 })
 export class TodoManagerComponent implements OnInit {
   mobileQuery: MediaQueryList;
+  isMobile:boolean;
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.isMobile = this.mobileQuery.matches;
+    // console.log( this.mobileQuery.matches);
   }
 
   checkLog() {

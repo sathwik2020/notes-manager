@@ -13,7 +13,7 @@
         </mat-toolbar>
 
     <mat-sidenav-container>
-        <mat-sidenav #sidenav role="navigation" [opened]="true" mode="side">
+        <mat-sidenav #sidenav role="navigation" [opened]="!mobileQuery.matches" mode="side">
             <app-todo-list class="todo-list"></app-todo-list>
 
        </mat-sidenav>

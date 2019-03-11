@@ -33,16 +33,17 @@ export class TodoListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.store.dispatch(new TodoActions.LoadTodos());
-  }
-
-  ngAfterViewInit() {
     this.selectedNote = this.todoStoreService.fetchTodos()[this.todoStoreService.fetchTodos().length -1];
     this.todoStoreService.selectedTodo.subscribe(res => {
       if (res) {
         this.selectedNote =res;
       }
     })
-    
+  }
+
+  ngAfterViewInit() {
+
+
     // console.log('from after view init:'+this.selectedNote)
   }
 

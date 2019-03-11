@@ -4,7 +4,7 @@
     [(ngModel)]="noteFilter" />
   </div>
    <!-- sdfsd: {{selectedNote | json}} -->
-    <ng-container *ngFor="let todo of (todosState$ | async)?.todos.reverse() | filter: noteFilter; let i = index;let first = first; let last = last">
+    <div *ngFor="let todo of (todosState$ | async)?.todos.reverse() | filter: noteFilter; let i = index;let first = first; let last = last">
         <!-- {{todo | json}}
         {{i}} -->
         <li [ngClass]="{ 'active': todo.id == selectedNote?.id  }" class="todo-list-item list-group-item" (click)="selectTodo(todo)">
@@ -22,5 +22,5 @@
 
           </li>
 
-      </ng-container>
+        </div>
 </ul>

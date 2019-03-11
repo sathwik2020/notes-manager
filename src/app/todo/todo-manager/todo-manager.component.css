@@ -5,3 +5,6 @@
 .btn-back-section .btn{
   float: right;
 }
+.todo-module-header{
+  overflow: hidden;
+}

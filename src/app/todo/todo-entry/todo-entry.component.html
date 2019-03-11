@@ -6,7 +6,7 @@
       [(ngModel)]="todoName" (input)="editTodo()"/>
       <hr>
 
-      <textarea rows="10" placeholder="Enter Content?" class="txt-todo-input form-control"  type="text"
+      <textarea rows="6" placeholder="Enter Content?" class="txt-todo-input form-control"  type="text"
       [(ngModel)]="todoContent"  (input)="editTodo()"></textarea>
       <p *ngIf="todoCreatedOn" >Created At: {{todoCreatedOn | date:'medium'}}</p>
       <p *ngIf="todoCreatedOn" >Last Updated At: {{todoUpdatedOn | date:'medium'}}</p>
